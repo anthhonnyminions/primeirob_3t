@@ -13,23 +13,22 @@ function escreva(){
     document.write(tabuada + " x 10 = " + (tabuada*10) + "<br>");
 }
 
-let lista = ["Jesus", "Heinsenberg","Jorge"];
+let lista = ["Jesus","Spessato","Duarte","Jorge","Neuza","Gilmar","Jossyara"];
 
 function mostraLista(){
-    document.write("Tamanho da Lista: " + lista.length + "<br>");
-    
+    document.write("Tamanho da lista: " + lista.length + "<br>");
     for(let i = 0; i < lista.length; i++){
-        document.write("Procurado: " + lista[i]+ "<br>");
+        document.write("Professor: " + lista[i] + "<br>");
     }
 }
 
 function multiplica(){
     for(let i = 6; i <= 8; i++){
-        document.write("Taboada do " + i + "<br>");
+        document.write("Tabuada do " + i + "<br>");
         for(let j = 1; j <= 10; j++){
             document.write(i + " x "+j+" = " + (i*j) + "<br>");
         }
-        document.write("<br>")
+        document.write("<br>");
     }
 }
 
