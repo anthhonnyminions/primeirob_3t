@@ -33,18 +33,34 @@ function multiplica (){
       document.write("<br>")
   }
 }
+function moeda(atual){
+  return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+}
 function total(){
   let  v = document.getElementById("Valor").value;
   let  j = document.getElementById("Juros").value;
   let  t = document.getElementById("Meses").value; 
+  
+
+  if(!Number(v)){
+    alert("O valor deve ser numerico burro.");
+    document.getElementById("valor").value = "";
+    document.getElementById("valor").focus();
+  }
+
+  if(!Number(v)){
+    alert("O valor deve ser numerico burro.");
+    document.getElementById("valor").value = "";
+    document.getElementById("valor").focus();
+  }
   let  r = 0;
 for (let i=1; i <= t;i++) {
   r = v * (1+(j/100));
-  document.write("Mês "+ i + "valor: " + r + "<br>");
+  document.write("Mês " + "valor: " + moeda(r) + "<br>");
   v = r; 
 
 }
-  document.write("Resultado: R$"+ r);
+  document.write("Resultado: R$"+ moeda(r));
 }
 function media(){
     let n1 = document.getElementById("n1").value;
@@ -54,5 +70,15 @@ function media(){
 
     let r = (Number(n1)+Number(n2)+Number(n3)+Number(n4))/4;
     document.getElementById("result").innerHTML = "Media" + r;
+
+}
+function soma(){
+  let n1 = document.getElementById("n1").value;
+  let n2 = document.getElementById("n2").value;
+  let n3 = document.getElementById("n3").value;
+  let n4 = document.getElementById("n4").value;
+
+  let r = (Number(n1)+Number(n2)+Number(n3)+Number(n4));
+  document.getElementById("result").innerHTML = "Soma" + r;
 
 }
