@@ -116,3 +116,18 @@ function soma(){
 
 }
 
+let a = 5;
+let b = -1;
+let c = -6; 
+
+function calculadoraRaiz(){
+  let delta = (b*b) - (4*a*c);
+  x1 = ((-b) + raiz_quadrada)/(2*a);
+  x2 = ((-b) - raiz_quadrada)/(2*a);
+  if (delta < 0){
+}else{
+    raiz_quadrada = Math.sqrt(delta);
+
+}
+ document.getElementById("raiz").innerHTML = "x1="+x1+" e x2="+x2; 
+}
